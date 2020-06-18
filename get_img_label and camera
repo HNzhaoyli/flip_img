@@ -12,3 +12,10 @@ def get_id(img_path):
             labels.append(int(label))
         camera_id.append(int(camera[0]))
     return camera_id, labels
+
+
+gallery_path = image_datasets['gallery'].imgs#得到gallery的图片的地址
+query_path = image_datasets['query'].imgs
+
+gallery_cam,gallery_label = get_id(gallery_path)
+query_cam,query_label = get_id(query_path)
